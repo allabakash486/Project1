@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <center>
+        
+        {% if a > b %}
+            <h1>If condition</h1>
+            <h1>{{a}} is graeter than {{b}}</h1>
+
+        {% else %}
+            <h1>else condition</h1>
+            <h1>{{b}} is graeter than {{a}}</h1>
+            {% endif%}
+    </center> -->
+    <center>
+        {% if a > b %}
+                {% if a > c %}
+                    <h1>inside if outer if </h1>
+                    <h1>{{a}} is graeter than b,c</h1>
+                {% else %}
+                    <h1>inside if outer else </h1>
+                    <h1>{{c}} is graeter than a,b</h1>
+                {% endif%}
+        {% else %}
+            {% if b > c %}
+                <h1>inside if outer else </h1>
+                <h1>{{b}} is graeter than c,a</h1>
+            {% else %}
+                <h1>inside else outer else </h1>
+                <h1>{{c}} is graeter than a,b</h1>
+            {% endif%}
+        {% endif%}
+    </center>
+
+</body>
+</html>
